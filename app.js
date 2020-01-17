@@ -156,7 +156,7 @@ function loadTable(){
                 var noOfRows = userTable.rows.length;
                     var tr = userTable.insertRow(noOfRows);
 
-                    
+                    tr.setAttribute('id',submittedData[i].id);
                     
                     for(var i=0; i < tableHead.length;i++){
 
