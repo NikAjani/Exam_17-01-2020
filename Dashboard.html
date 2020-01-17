@@ -7,6 +7,16 @@
     <title>DashBoard</title>
 </head>
 <body>
-    <h3>Login</h3>
+    <header>
+        <div id="displayName"></div>
+        <script>
+            document.getElementById('displayName').innerHTML = 'WelCome : '+sessionStorage.getItem('login');
+        </script>
+        <br>
+        DashBoard | <a href="users.html">Users</a> | Login Session | Logout
+    </header>
+    <div>
+
+    </div>
 </body>
 </html>
