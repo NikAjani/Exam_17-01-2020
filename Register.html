@@ -5,47 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register Now</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     <div>
-        <form action="">
-            <div>
-                <input type="text" name="name" id="name" placeholder="name">
-            </div>
-            <div>
-                <input type="email" name="emailId" id="emailId" placeholder="email">
-            </div>
-            <div>
-                <input type="password" name="pass" id="pass" placeholder="Password">
-            </div>
-            <div>
-                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword">
-            </div>
-            <div>
-                <select id="city">
-                    <option value="select">Select City</option>
-                    <option value="Ahamedabad">Ahamedabad</option>
-                    <option value="Rajkot">Rajkot</option>
-                    <option value="Surat">Surat</option>
-                    <option value="Gandhinagar">Gandhinagar</option>
-                    <option value="Baroda">Baroda</option>
-                </select>
-            </div>
-            <div>
-                <select id="state">
-                    <option value="select">Select State</option>
-                    <option value="Gujarat">Gujarat</option>
-                    <option value="Panjab">Panjab</option>
-                    <option value="Maharashtra">Maharashtra</option>
-                </select>
-            </div>
-            <div>
-                <input type="checkbox" name="terms" id="terms">Terms & Conditions
-            </div>
-            <div>
-                <input type="button" value="Register" id="register" onclick="registerAdmin()">
-            </div>
-        </form>
+        <div class="container">
+            <h2>Register Your Self</h2>
+            <form action="">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="emailId" id="emailId" placeholder="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="pass" id="pass" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword">
+                </div>
+                <div class="form-group">
+                    <select id="city" class="form-control">
+                        <option value="select">Select City</option>
+                        <option value="Ahamedabad">Ahamedabad</option>
+                        <option value="Rajkot">Rajkot</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Gandhinagar">Gandhinagar</option>
+                        <option value="Baroda">Baroda</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="state" class="form-control">
+                        <option value="select">Select State</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Panjab">Panjab</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                    </select>
+                </div>
+                <divclass="form-group">
+                    <input type="checkbox" name="terms" id="terms"> Terms & Conditions
+                </divclass="form-group">
+                <div class="form-group">
+                    <input type="button" class="btn btn-primary" value="Register" id="register" onclick="registerAdmin()">
+                </div>
+            </form>
+        </div>
+        
     </div>
     <script src="app.js"></script>
 </body>

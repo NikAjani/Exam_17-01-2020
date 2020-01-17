@@ -7,26 +7,31 @@
     <title>Users</title>
 </head>
 <body onload="loadTable()">
-    <header>
+    <header class="container header1">
         <div id="displayName"></div>
         <script>
             document.getElementById('displayName').innerHTML = 'WelCome : '+sessionStorage.getItem('login');
         </script>
         <br>
-        <a href="Dashboard.html">DashBoard</a> | <a href="users.html">Users</a> | <a href="login_session.html"> Session</a> | <a onclick="logout()">Logout</a>
+        <a href="Dashboard.html">DashBoard</a> | <a href="users.html">Users</a> | <a href="login_session.html"> Session</a> | 
+        <input type="button" value="Logout"onclick="logout()">
     </header>
+    <br><br>
     <div>
         <form action="">
             <div>
-                <input type="text" name="UsersName" id="usersName" placeholder="Name">
+                <input type="text" name="UsersName" id="usersName" placeholder="User Name">
                 <input type="email" name="usersEmail" id="usersEmail" placeholder="Email">
                 <input type="password" name="usersPassword" id="usersPassword" placeholder="Password">
                 <input type="date" name="birthDate" id="birthDate" placeholder="Birth Date">
-                <input type="button" value="Submit" onclick="registerUser()">
-                <input type="reset" value="Clear">
+                <div id="registerUserBtn">
+                    <input type="button" value="Submit" onclick="registerUser()">
+                    <input type="reset" value="Clear">
+                </div>
+                
             </div>
         </form>
-    </div>
+    </div><br><br>
 
     <div id="listUser">
 
@@ -34,3 +39,5 @@
     <script src="app.js"></script>
 </body>
 </html>
+
+

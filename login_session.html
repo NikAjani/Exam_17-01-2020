@@ -7,14 +7,16 @@
     <title>Login Session</title>
 </head>
 <body onload="loadSessionTable()">
-    <div id="displayName"></div>
+    <header class="container header1">
+        <div id="displayName"></div>
         <script>
             document.getElementById('displayName').innerHTML = 'WelCome : '+sessionStorage.getItem('login');
         </script>
         <br>
-    <div>
-        <a href="Dashboard.html">DashBoard</a> | <a href="users.html">Users</a> | <a href="login_session.html"> Session</a> | <a onclick="logout()">Logout</a>
-    </div>
+        <a href="Dashboard.html">DashBoard</a> | <a href="users.html">Users</a> | <a href="login_session.html"> Session</a> | 
+        <input type="button" value="Logout"onclick="logout()">
+    </header>
+    <br><br>
     <div>
         <table id="sessionTable" border="1">
             <tr>
