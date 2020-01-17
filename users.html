@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+</head>
+<body>
+    <header>
+        <div id="displayName"></div>
+        <script>
+            document.getElementById('displayName').innerHTML = 'WelCome : '+sessionStorage.getItem('login');
+        </script>
+        <br>
+        DashBoard | <a href="users.html">Users</a> | Login Session | Logout
+    </header>
+    <div>
+        <form action="">
+            <div>
+                <input type="text" name="UsersName" id="usersName" placeholder="Name">
+                <input type="email" name="usersEmail" id="usersEmail" placeholder="Email">
+                <input type="password" name="usersPassword" id="usersPassword" placeholder="Password">
+                <input type="date" name="birthDate" id="birthDate" placeholder="Birth Date">
+                <input type="button" value="Submit" onclick="registerUser()">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
