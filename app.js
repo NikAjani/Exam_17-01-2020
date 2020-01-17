@@ -63,6 +63,7 @@ function loginUser(){
         if(fetchDateForLogin){
             for(var i = 0;i<fetchDateForLogin.length;i++){
                 if(fetchDateForLogin[i].email==userName && fetchDateForLogin[i].password==loginPassword){
+                    sessionStorage.setItem('login',userName);
                     alert('login Sucess');
                     window.location = 'Dashboard.html';
                     break;
@@ -73,5 +74,29 @@ function loginUser(){
         }else{
             alert('First Register Your Self..');
         }
+    }
+}
+
+function registerUser(){
+
+    var usersName = document.getElementById('usersName').value;
+    var usersEmail = document.getElementById('usersEmail').value;
+    var usersPassword = document.getElementById('usersPassword').value;
+    var birthOfDate = document.getElementById('birthDate').value;
+
+    if(usersName==''){
+        alert('Please Enter Valid name')
+    }else if(usersEmail==''){
+        alert('Please Enter Valid Email Id');
+    }else if(usersPassword == ''){
+        alert('Please Enter valid Password');
+    }else if(birthOfDate == ''){
+        alert('Please Enter Your BirthDate');
+    }else{
+        var user = new Users(usersName,usersEmail,usersPassword,'','',birthOfDate,'User','','');
+        submittedData.push(user);
+        localStorage.setItem('submittedData',JSON.stringify(submittedData));
+        
+        window.location = 'Dashboard.html';
     }
 }
