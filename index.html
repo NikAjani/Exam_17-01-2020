@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
 </head>
-<body>
+<body onload="registerButton()">
     <div id="login">
         <form action="">
             <div>
-                <input type="text" name="userName" id="userName">
+                <input type="text" name="userName" id="userName" placeholder="Email">
             </div>
             <div>
-                <input type="password" name="loginPassword" id="loginPassword">
+                <input type="password" name="loginPassword" id="loginPassword" placeholder="Password">
             </div>
             <div>
-                <input type="button" value="Login" id="loginNow" onclick="loginUser()"><br>
-                OR
+                <input type="button" value="Login" id="loginNow" onclick="loginUser()">
             </div>
-            <div>
-                <input type="button" value="REGISTER NOW" id="registerNow" onclick="redirectAdmin()">
+            <div id="registerDiv">
+                <br>
+                OR<input type="button" value="REGISTER NOW" id="registerNow" onclick="redirectAdmin()">
             </div>
         </form>
     </div>

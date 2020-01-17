@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Users</title>
 </head>
-<body>
+<body onload="loadTable()">
     <header>
         <div id="displayName"></div>
         <script>
             document.getElementById('displayName').innerHTML = 'WelCome : '+sessionStorage.getItem('login');
         </script>
         <br>
-        DashBoard | <a href="users.html">Users</a> | Login Session | Logout
+        <a href="Dashboard.html">DashBoard</a> | <a href="users.html">Users</a> | <a href="login_session.html"> Session</a> | <a onclick="logout()">Logout</a>
     </header>
     <div>
         <form action="">
@@ -26,6 +26,10 @@
                 <input type="reset" value="Clear">
             </div>
         </form>
+    </div>
+
+    <div id="listUser">
+
     </div>
     <script src="app.js"></script>
 </body>

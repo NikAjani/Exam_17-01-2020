@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Index</title>
+</head>
+<body>
+    <div id="displayUser"></div>
+    <script>
+        document.getElementById('displayUser').innerHTML = 'WelCome : '+sessionStorage.getItem('login');
+    </script><br>
+    <div><a onclick="logout()">Logout</a></div>
+    <br><br>
+    <div id="userBirthdayMsg"></div>
+    <script>
+        if(sessionStorage.getItem('bithday')==sessionStorage.getItem('login')){
+            document.getElementById('userBirthdayMsg').innerHTML = "Happy BirthDay";
+        }
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>

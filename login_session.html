@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DashBoard</title>
+    <title>Login Session</title>
 </head>
-<body onload="displayAgeCount()">
-    <header>
-        <div id="displayName"></div>
+<body onload="loadSessionTable()">
+    <div id="displayName"></div>
         <script>
             document.getElementById('displayName').innerHTML = 'WelCome : '+sessionStorage.getItem('login');
         </script>
         <br>
-        <a href="Dashboard.html">DashBoard</a> | <a href="users.html">Users</a> | <a href="login_session.html"> Session</a> | <a onclick="logout()">Logout</a>
-    </header>
-    <br><br>
     <div>
-        <div id="downAge"></div>
-        <div id="bwAge"></div>
-        <div id="aboveAge"></div>
+        <a href="Dashboard.html">DashBoard</a> | <a href="users.html">Users</a> | <a href="login_session.html"> Session</a> | <a onclick="logout()">Logout</a>
     </div>
-    <div id="birthdayMSG"></div>
-
+    <div>
+        <table id="sessionTable" border="1">
+            <tr>
+                <th>NAME</th>
+                <th>Login Time</th>
+                <th>Logout Time</th>
+            </tr>
+        </table>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
