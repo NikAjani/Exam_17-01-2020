@@ -49,5 +49,29 @@ function redirectAdmin(){
 }
 
 function loginUser(){
-    
+    var userName = document.getElementById('userName').value;
+    var loginPassword = document.getElementById('loginPassword').value;
+
+    if(userName == ''){
+        alert("Please Enter valid Email Id");
+    }else if(loginPassword == ''){
+        alert("Please Enter Valid Password");
+    }else{
+        
+        var fetchDateForLogin = JSON.parse(localStorage.getItem('submittedData'));
+
+        if(fetchDateForLogin){
+            for(var i = 0;i<fetchDateForLogin.length;i++){
+                if(fetchDateForLogin[i].email==userName && fetchDateForLogin[i].password==loginPassword){
+                    alert('login Sucess');
+                    window.location = 'Dashboard.html';
+                    break;
+                }else{
+                    alert('Register your Self OR Try Agin');
+                }
+            }
+        }else{
+            alert('First Register Your Self..');
+        }
+    }
 }
